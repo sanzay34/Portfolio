@@ -14,24 +14,11 @@ const services = [
 	},
 	{
 		id: 3,
-		title: "Backend Development",
-		description: "Developing robust server-side logic and databases.",
-	},
-	{
-		id: 4,
-		title: "Full-Stack Development",
-		description: "Combining both frontend and backend development skills.",
-	},
-	{
-		id: 5,
 		title: "Content Writing",
 		description: "Writing content for your business and companies.",
 	},
-	{
-		id: 6,
-		title: "Digital Marketing",
-		description: "Promote your business with our digital marketing team.",
-	},
+	
+	
 ];
 
 const Service = () => {
@@ -52,7 +39,7 @@ const Service = () => {
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{services.map((service, index) => (
 						<motion.div
-							key={service.id}
+							
 							className="bg-gray-800 px-6 pb-6 rounded-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105"
 							initial={{ opacity: 0, y: 50 }}
 							animate={{ opacity: 1, y: 0 }}
@@ -67,13 +54,7 @@ const Service = () => {
 							}}
 						>
 							{/* Service ID */}
-							<div
-								className="text-right text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-600 to-blue-400"
-							>
-								{service.id}
-							</div>
-
+							
 							{/* Service Title */}
 							<h3
 								className="mt-2 text-2xl font-bold text-transparent bg-clip-text 

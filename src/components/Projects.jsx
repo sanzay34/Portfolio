@@ -1,30 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
-import employeeMSImage from "../assets/react.svg";
-import bookMSImage from "../assets/react.svg";
+import todoImage from "../assets/image1.png";
+import personalityImage from "../assets/image.png";
 
 const projects = [
 	{
 		id: 1,
-		name: "Employee MS",
-		technologies: "MERN Stack",
-		image: employeeMSImage,
+		name: "Todo App",
+		technologies: "React Vite",
+		image: todoImage,
 		github: "https://github.com/YouafKhan1",
 	},
 	{
 		id: 2,
-		name: "Blog App",
-		technologies: "MERN Stack",
-		image: bookMSImage,
+		name: "Personality Prediction",
+		technologies: "React",
+		image: personalityImage,
 		github: "https://github.com/YouafKhan1",
 	},
-	{
-		id: 3,
-		name: "Book MS",
-		technologies: "MERN Stack",
-		image: employeeMSImage,
-		github: "https://github.com/YouafKhan1",
-	},
+	
 ];
 
 const Projects = () => {

@@ -1,45 +1,31 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const Navbar = () => {
-	const linkVariants = {
-		hover: {
-			scale: 1.1,
-			color: "#9CA3AF", // gray-400
-			transition: { type: "spring", stiffness: 300 },
-		},
-	};
-
 	return (
-		<motion.nav
-			initial={{ y: -50, opacity: 0 }}
-			animate={{ y: 0, opacity: 1 }}
-			transition={{ duration: 0.8, ease: "easeOut" }}
-			className="bg-black text-white px-8 md:px-16 lg:px-24 py-4 md:py-6 md:text-[20px] lg:text-[25px] shadow-lg"
-		>
+		<nav className="bg-black text-white px-8 md:px-16 md:md:py-4 lg:px-24 lg:py-6 md:text-[20px] lg:text-[25px]">
 			<div className="container py-2 flex justify-center md:justify-between items-center">
-				<motion.div
-					className="space-x-6"
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ delay: 0.5, duration: 0.8 }}
-				>
-					{["Home", "About Me", "Services", "Projects", "Contact"].map(
-						(item, index) => (
-							<motion.a
-								key={item}
-								href={`#${item.toLowerCase().replace(" ", "")}`}
-								variants={linkVariants}
-								whileHover="hover"
-								className="transition duration-150 ease-in-out"
-							>
-								{item}
-							</motion.a>
-						)
-					)}
-				</motion.div>
+				<div className="space-x-6">
+					<a
+						href="#home"
+						className="hover:text-gray-400 transition duration-150 ease-in-out "
+					>
+						Home
+					</a>
+					<a href="#about" className="hover:text-gray-400">
+						About Me
+					</a>
+					<a href="#service" className="hover:text-gray-400">
+						Services
+					</a>
+					<a href="#project" className="hover:text-gray-400">
+						Projects
+					</a>
+					<a href="#contact" className="hover:text-gray-400">
+						Contact
+					</a>
+				</div>
 			</div>
-		</motion.nav>
+		</nav>
 	);
 };
 
