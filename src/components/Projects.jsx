@@ -16,9 +16,8 @@ const projects = [
 		name: "Personality Prediction",
 		technologies: "React",
 		image: personalityImage,
-		github: "https://github.com/YouafKhan1",
+		github: "https://personalityprediction.netlify.app/",
 	},
-	
 ];
 
 const Projects = () => {
