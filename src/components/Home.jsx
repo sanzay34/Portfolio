@@ -37,7 +37,7 @@ const Hero = () => {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
 			>
-				I specialize in building modern and responsive web applications.
+				I  am specialize in building modern and responsive web applications.
 			</motion.p>
 
 			{/* Buttons */}
