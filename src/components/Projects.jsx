@@ -9,7 +9,7 @@ const projects = [
 		name: "Todo App",
 		technologies: "React Vite",
 		image: todoImage,
-		github: "https://github.com/YouafKhan1",
+		github: "",
 	},
 	{
 		id: 2,
