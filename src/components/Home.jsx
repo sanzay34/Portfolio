@@ -4,67 +4,75 @@ import HeroImage from "../assets/profile.jpeg";
 
 const Hero = () => {
 	return (
-		<div className="bg-black text-white text-center py-16 overflow-hidden">
-			{/* Profile Image */}
-			<motion.img
-				src={HeroImage}
-				alt="Sanjaya Khatiwada"
-				className="mx-auto mb-8 w-48 h-48 rounded-full object-cover shadow-lg"
-				initial={{ opacity: 0, y: -50, scale: 0.8 }}
-				animate={{ opacity: 1, y: 0, scale: 1 }}
-				transition={{ duration: 0.8, ease: "easeOut" }}
-				whileHover={{ scale: 1.15, rotate: 5 }}
-			/>
-
-			{/* Title */}
-			<motion.h1
-				className="text-4xl font-bold"
-				initial={{ opacity: 0, y: 50 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-			>
-				I'm{" "}
-				<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-					Sanjaya Khatiwada
-				</span>
-				, Frontend Developer
-			</motion.h1>
-
-			{/* Subtitle */}
-			<motion.p
-				className="mt-4 text-lg text-gray-300"
-				initial={{ opacity: 0, y: 30 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-			>
-				I  am specialize in building modern and responsive web applications.
-			</motion.p>
-
-			{/* Buttons */}
-			<div className="mt-8 space-x-4">
-				<motion.button
-					whileHover={{
-						scale: 1.1,
-						background: "linear-gradient(to right, #32CD32, #1E90FF)",
-						boxShadow: "0px 0px 12px #32CD32",
-					}}
-					whileTap={{ scale: 0.95 }}
-					className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full"
+		<div className="bg-black text-white text-center py-16 overflow-hidden md:flex-col">
+			<div>
+				{/* Profile Image */}
+				<motion.img
+					src={HeroImage}
+					alt="Sanjaya Khatiwada"
+					className="mx-auto mb-8 w-48 h-48 rounded-full object-cover shadow-lg"
+					initial={{ opacity: 0, y: -50, scale: 0.8 }}
+					animate={{ opacity: 1, y: 0, scale: 1 }}
+					transition={{ duration: 0.8, ease: "easeOut" }}
+					whileHover={{ scale: 1.15, rotate: 5 }}
+				/>
+			</div>
+			<div>
+				{/* Title */}
+				<motion.h1
+					className="text-4xl font-bold"
+					initial={{ opacity: 0, y: 50 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
 				>
-					Contact With Me
-				</motion.button>
+					I'm{" "}
+					<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+						Sanjaya Khatiwada
+					</span>
+					, Frontend Developer
+				</motion.h1>
 
-				<motion.button
-					whileHover={{
-						scale: 1.1,
-						background: "linear-gradient(to right, #FF69B4, #FFD700)",
-						boxShadow: "0px 0px 12px #FF69B4",
-					}}
-					whileTap={{ scale: 0.95 }}
-					className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full"
+				{/* Subtitle */}
+				<motion.p
+					className="mt-4 text-lg text-gray-300"
+					initial={{ opacity: 0, y: 30 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
 				>
-					Resume
-				</motion.button>
+					I am specialize in building modern and responsive web applications.
+				</motion.p>
+				<div className="flex  items-center justify-center gap-3 mt-3">
+					{/* Buttons */}
+					<div className="">
+						<a href="#contact" className="mt-8 space-x-4">
+							<motion.button
+								whileHover={{
+									scale: 1.1,
+									background: "linear-gradient(to right, #32CD32, #1E90FF)",
+									boxShadow: "0px 0px 12px #32CD32",
+								}}
+								whileTap={{ scale: 0.95 }}
+								className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full"
+							>
+								Contact With Me
+							</motion.button>
+						</a>
+					</div>
+
+					<div>
+						<motion.button
+							whileHover={{
+								scale: 1.1,
+								background: "linear-gradient(to right, #FF69B4, #FFD700)",
+								boxShadow: "0px 0px 12px #FF69B4",
+							}}
+							whileTap={{ scale: 0.95 }}
+							className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full"
+						>
+							Resume
+						</motion.button>
+					</div>
+				</div>
 			</div>
 
 			{/* Background Glow Effect */}
