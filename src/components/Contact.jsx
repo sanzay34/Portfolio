@@ -48,7 +48,7 @@ const Contact = () => {
 						</div>
 						<div className="mb-4">
 							<FaMapMarkedAlt className="inline-block text-green-400 mr-2" />
-							<span>Manhankal-6, Chabahil, Kathmandu, Nepal</span>
+							<span>Mahankal-6, Chabahil, Kathmandu, Nepal</span>
 						</div>
 					</motion.div>
 
@@ -94,7 +94,7 @@ const Contact = () => {
 							<motion.button
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.9 }}
-								className="bg-gradient-to-r from-green-400 to-blue-500 text-white hidden sm:inline md:inline transform transition-transform duration-300 px-8 py-2 rounded-full"
+								className="bg-gradient-to-r from-green-400 to-blue-500 text-white inline md:inline transform transition-transform duration-300 px-8 py-2 rounded-full"
 							>
 								Send
 							</motion.button>
