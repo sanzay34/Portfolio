@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 const Contact = () => {
+	const [email, setEmail] = useState("");
+	const [emailValid, setEmailValid] = useState(null);
+	const [loading, setLoading] = useState(false);
+
+	// Function to validate email using MailboxLayer API
+	const validateEmail = async (email) => {
+		if (!email) return;
+		setLoading(true);
+
+		 try {
+				const response = await axios.get(
+					`https://api.emaillistverify.com/api/verifyEmail?secret=8qEdHKSVUeHYQske9cRAA&email=${email}`
+				);
+
+				console.log(response.data); // Debugging
+
+				// EmailListVerify returns a string ("ok", "invalid", "unknown", etc.)
+				if (response.data === "ok") {
+					setEmailValid(true);
+				} else {
+					setEmailValid(false);
+				}
+			} catch (error) {
+				console.error("Error validating email:", error);
+				setEmailValid(false);
+			}
+
+		setLoading(false);
+	};
+
 	return (
 		<div className="bg-black text-white py-20" id="contact">
 			<div className="container mx-auto px-8 md:px-16 lg:px-24">
@@ -22,10 +53,7 @@ const Contact = () => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.3 }}
 					>
-						<h3
-							className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r 
-              from-green-400 to-blue-500 mb-4"
-						>
+						<h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-4">
 							Let's Talk
 						</h3>
 						<p>
@@ -35,10 +63,7 @@ const Contact = () => {
 
 						<div className="mb-4 mt-8">
 							<FaEnvelope className="inline-block text-green-400 mr-2" />
-							<a
-								href="mailto:youremail@example.com"
-								className="hover:underline"
-							>
+							<a href="mailto:sanzay321@gmail.com" className="hover:underline">
 								sanzay321@gmail.com
 							</a>
 						</div>
@@ -69,16 +94,30 @@ const Contact = () => {
 									placeholder="Enter Your Name"
 								/>
 							</div>
+
 							<div>
-								<label htmlFor="Email" className="block mb-2">
+								<label htmlFor="email" className="block mb-2">
 									Email
 								</label>
 								<input
 									type="text"
+									value={email}
+									onChange={(e) => {
+										setEmail(e.target.value);
+										validateEmail(e.target.value);
+									}}
 									className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400"
 									placeholder="Enter Your Email"
 								/>
+								{loading && <p className="text-yellow-400 mt-1">Checking...</p>}
+								{emailValid === false && (
+									<p className="text-red-500 mt-1">Invalid email address</p>
+								)}
+								{emailValid === true && (
+									<p className="text-green-400 mt-1">Valid email address</p>
+								)}
 							</div>
+
 							<div>
 								<label htmlFor="message" className="block mb-2">
 									Message
