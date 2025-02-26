@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
-import { motion } from "framer-motion";
 import axios from "axios";
 
 const Contact = () => {
@@ -13,23 +12,23 @@ const Contact = () => {
 		if (!email) return;
 		setLoading(true);
 
-		 try {
-				const response = await axios.get(
-					`https://api.emaillistverify.com/api/verifyEmail?secret=8qEdHKSVUeHYQske9cRAA&email=${email}`
-				);
+		try {
+			const response = await axios.get(
+				`https://api.emaillistverify.com/api/verifyEmail?secret=8qEdHKSVUeHYQske9cRAA&email=${email}`
+			);
 
-				console.log(response.data); // Debugging
+			console.log(response.data); // Debugging
 
-				// EmailListVerify returns a string ("ok", "invalid", "unknown", etc.)
-				if (response.data === "ok") {
-					setEmailValid(true);
-				} else {
-					setEmailValid(false);
-				}
-			} catch (error) {
-				console.error("Error validating email:", error);
+			// EmailListVerify returns a string ("ok", "invalid", "unknown", etc.)
+			if (response.data === "ok") {
+				setEmailValid(true);
+			} else {
 				setEmailValid(false);
 			}
+		} catch (error) {
+			console.error("Error validating email:", error);
+			setEmailValid(false);
+		}
 
 		setLoading(false);
 	};
@@ -37,22 +36,10 @@ const Contact = () => {
 	return (
 		<div className="bg-black text-white py-20" id="contact">
 			<div className="container mx-auto px-8 md:px-16 lg:px-24">
-				<motion.h2
-					className="text-4xl font-bold text-center mb-12"
-					initial={{ opacity: 0, y: -50 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.8, ease: "easeOut" }}
-				>
-					Contact Me
-				</motion.h2>
+				<h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
 
 				<div className="flex flex-col md:flex-row items-center md:space-x-12">
-					<motion.div
-						className="flex-1"
-						initial={{ opacity: 0, x: -50 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.8, delay: 0.3 }}
-					>
+					<div className="flex-1">
 						<h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-4">
 							Let's Talk
 						</h3>
@@ -75,14 +62,9 @@ const Contact = () => {
 							<FaMapMarkedAlt className="inline-block text-green-400 mr-2" />
 							<span>Mahankal-6, Chabahil, Kathmandu, Nepal</span>
 						</div>
-					</motion.div>
+					</div>
 
-					<motion.div
-						className="flex-1 w-full"
-						initial={{ opacity: 0, x: 50 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.8, delay: 0.6 }}
-					>
+					<div className="flex-1 w-full">
 						<form className="space-y-4">
 							<div>
 								<label htmlFor="name" className="block mb-2">
@@ -130,15 +112,11 @@ const Contact = () => {
 								/>
 							</div>
 
-							<motion.button
-								whileHover={{ scale: 1.1 }}
-								whileTap={{ scale: 0.9 }}
-								className="bg-gradient-to-r from-green-400 to-blue-500 text-white inline md:inline transform transition-transform duration-300 px-8 py-2 rounded-full"
-							>
+							<button className="bg-gradient-to-r from-green-400 to-blue-500 text-white inline md:inline transform transition-transform duration-300 px-8 py-2 rounded-full">
 								Send
-							</motion.button>
+							</button>
 						</form>
-					</motion.div>
+					</div>
 				</div>
 			</div>
 		</div>
