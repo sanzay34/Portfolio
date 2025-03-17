@@ -1,30 +1,107 @@
 import React from "react";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+	const [hamIcon, setHamIcon] = useState(false);
 	return (
-		<nav className="bg-black text-white px-8 p-4 sm:gap-x-1 md:px-16 md:md:py-4 lg:px-24 lg:py-6 md:text-[20px] lg:text-[25px]">
-			<div className="container py-2 flex justify-between md:justify-between items-center">
-				<div className="space-x-6">
-					<a
-						href="#home"
-						className="hover:text-gray-400 transition duration-150 ease-in-out "
-					>
-						Home
-					</a>
-					<a href="#about" className="hover:text-gray-400">
-						About
-					</a>
-					<a href="#service" className="hover:text-gray-400">
-						Services
-					</a>
-					<a href="#project" className="hover:text-gray-400">
-						Projects
-					</a>
-					<a href="#contact" className="hover:text-gray-400">
-						Contact
-					</a>
-				</div>
+		<nav className="bg-green-600 text-white px-8 p-4 sticky top-0 w-full z-50">
+			<div className=" flex justify-between  items-center">
+				<ul className=" hidden md:flex space-x-6">
+					<li>
+						<a
+							href="#home"
+							className="hover:text-gray-400 transition duration-150 ease-in-out "
+						>
+							Home
+						</a>
+					</li>
+					<li>
+						<a
+							href="#about"
+							className="hover:text-gray-400 transition duration-150 ease-in-out "
+						>
+							About Me
+						</a>
+					</li>
+					<li>
+						<a
+							href="#services"
+							className="hover:text-gray-400 transition duration-150 ease-in-out "
+						>
+							Services
+						</a>
+					</li>
+					<li>
+						<a
+							href="#projects"
+							className="hover:text-gray-400 transition duration-150 ease-in-out "
+						>
+							Projects
+						</a>
+					</li>
+					<li>
+						<a
+							href="#contact"
+							className="hover:text-gray-400 transition duration-150 ease-in-out "
+						>
+							Contact
+						</a>
+					</li>
+				</ul>
+				<button
+					onClick={() => {
+						setHamIcon(!hamIcon);
+					}}
+					className="md:hidden"
+				>
+					{hamIcon ? <FaTimes size={24} /> : <FaBars size={24} />}
+				</button>
 			</div>
+			{hamIcon && (
+				<div className=" md:hidden flex flex-col ">
+					
+						
+							<a
+								href="#home"
+								className="hover:text-gray-400 transition duration-150 ease-in-out "
+							>
+								Home
+							</a>
+						
+						
+							<a
+								href="#about"
+								className="hover:text-gray-400 transition duration-150 ease-in-out "
+							>
+								About Me
+							</a>
+						
+						
+							<a
+								href="#services"
+								className="hover:text-gray-400 transition duration-150 ease-in-out "
+							>
+								Services
+							</a>
+						
+						
+							<a
+								href="#projects"
+								className="hover:text-gray-400 transition duration-150 ease-in-out "
+							>
+								Projects
+							</a>
+						
+							<a
+								href="#contact"
+								className="hover:text-gray-400 transition duration-150 ease-in-out "
+							>
+								Contact
+							</a>
+						
+				</div>
+			)}
 		</nav>
 	);
 };
