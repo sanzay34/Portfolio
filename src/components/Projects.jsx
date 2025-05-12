@@ -8,7 +8,8 @@ const projects = [
 		name: "Todo App",
 		technologies: "React Vite",
 		image: todoImage,
-		github: "",
+		github:
+			"https://todolist-9rg5ypiq1-sanjaya-khatiwadas-projects.vercel.app/",
 	},
 	{
 		id: 2,
