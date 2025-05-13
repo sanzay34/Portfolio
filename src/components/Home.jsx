@@ -14,7 +14,7 @@ const Home = () => {
 			</div>
 			<div>
 				{/* Title */}
-				<h1 className="text-4xl font-bold opacity-20 animate-fade-in-up">
+				<h1 className="text-4xl sm:text-xl font-bold opacity-20 animate-fade-in-up">
 					I'm{" "}
 					<span className=" bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
 						Sanjaya Khatiwada
@@ -23,7 +23,7 @@ const Home = () => {
 				</h1>
 
 				{/* Subtitle */}
-				<p className="mt-4 text-lg text-gray-300 ">
+				<p className="mt-4 text-lg text-gray-300 sm:text-md">
 					I specialize in building modern and responsive web applications.
 				</p>
 
