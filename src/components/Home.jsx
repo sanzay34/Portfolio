@@ -3,7 +3,10 @@ import HeroImage from "../assets/profile.jpeg";
 
 const Home = () => {
 	return (
-		<div className="bg-black text-white text-center py-16 overflow-hidden md:flex-col relative" id="home">
+		<div
+			className="bg-black text-white text-center py-16 overflow-hidden md:flex-col relative"
+			id="home"
+		>
 			<div>
 				{/* Profile Image */}
 				<img
@@ -19,14 +22,10 @@ const Home = () => {
 					<span className=" bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
 						Sanjaya Khatiwada
 					</span>
-					, Frontend Developer
+					, Frontend Developer specialized in building modern and responsive web
+					applications.
 				</h1>
-
-				{/* Subtitle */}
-				<p className="mt-4 text-md text-gray-300 lg:text-lg">
-					I specialize in building modern and responsive web applications.
-				</p>
-
+				specialized in building modern and responsive web applications.
 				<div className="flex items-center justify-center gap-3 mt-3">
 					{/* Buttons */}
 					<div>
