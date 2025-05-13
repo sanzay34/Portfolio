@@ -4,102 +4,49 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
 	const [hamIcon, setHamIcon] = useState(false);
+	const navLinks = [
+		{ href: "#home", label: "Home" },
+		{ href: "#about", label: "About Me" },
+		{ href: "#services", label: "Services" },
+		{ href: "#projects", label: "Projects" },
+		{ href: "#contact", label: "Contact" },
+	];
 	return (
 		<nav className="bg-green-600 text-white px-8 p-4 sticky top-0 w-full z-50">
 			<div className=" flex justify-between  items-center">
-				<ul className=" hidden md:flex space-x-6">
-					<li>
-						<a
-							href="#home"
-							className="hover:text-gray-400 transition duration-150 ease-in-out "
-						>
-							Home
-						</a>
-					</li>
-					<li>
-						<a
-							href="#about"
-							className="hover:text-gray-400 transition duration-150 ease-in-out "
-						>
-							About Me
-						</a>
-					</li>
-					<li>
-						<a
-							href="#services"
-							className="hover:text-gray-400 transition duration-150 ease-in-out "
-						>
-							Services
-						</a>
-					</li>
-					<li>
-						<a
-							href="#projects"
-							className="hover:text-gray-400 transition duration-150 ease-in-out "
-						>
-							Projects
-						</a>
-					</li>
-					<li>
-						<a
-							href="#contact"
-							className="hover:text-gray-400 transition duration-150 ease-in-out "
-						>
-							Contact
-						</a>
-					</li>
+				<ul className="hidden md:flex space-x-6">
+					{navLinks.map((link) => (
+						<li key={link.href}>
+							<a
+								href={link.href}
+								className="hover:text-gray-400 transition duration-150 ease-in-out"
+							>
+								{link.label}
+							</a>
+						</li>
+					))}
 				</ul>
+
 				<button
-					onClick={() => {
-						setHamIcon(!hamIcon);
-					}}
+					onClick={() => setHamIcon(!hamIcon)}
 					className="md:hidden"
+					aria-label={hamIcon ? "Close menu" : "Open menu"}
 				>
 					{hamIcon ? <FaTimes size={24} /> : <FaBars size={24} />}
 				</button>
 			</div>
 			{hamIcon && (
-				<div className=" md:hidden flex flex-col ">
-					
-						
-							<a
-								href="#home"
-								className="hover:text-gray-400 transition duration-150 ease-in-out "
-							>
-								Home
-							</a>
-						
-						
-							<a
-								href="#about"
-								className="hover:text-gray-400 transition duration-150 ease-in-out "
-							>
-								About Me
-							</a>
-						
-						
-							<a
-								href="#services"
-								className="hover:text-gray-400 transition duration-150 ease-in-out "
-							>
-								Services
-							</a>
-						
-						
-							<a
-								href="#projects"
-								className="hover:text-gray-400 transition duration-150 ease-in-out "
-							>
-								Projects
-							</a>
-						
-							<a
-								href="#contact"
-								className="hover:text-gray-400 transition duration-150 ease-in-out "
-							>
-								Contact
-							</a>
-						
+				<div className="md:hidden flex flex-col space-y-2 mt-2">
+					{navLinks.map((link) => (
+						<a
+							key={link.href}
+							href={link.href}
+							onClick={() => setHamIcon(false)}
+							className="hover:text-gray-400 transition duration-150 ease-in-out"
+						>
+							{link.label}
+						</a>
+					))}
 				</div>
 			)}
 		</nav>
