@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../assets/profile.jpeg";
 
-const Hero = () => {
+const Home = () => {
 	return (
 		<div className="bg-black text-white text-center py-16 overflow-hidden md:flex-col relative" id="home">
 			<div>
@@ -14,7 +14,7 @@ const Hero = () => {
 			</div>
 			<div>
 				{/* Title */}
-				<h1 className="text-4xl font-bold opacity-0 animate-fade-in-up">
+				<h1 className="text-4xl font-bold opacity-20 animate-fade-in-up">
 					I'm{" "}
 					<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
 						Sanjaya Khatiwada
