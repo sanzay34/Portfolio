@@ -23,7 +23,7 @@ const Home = () => {
 				</h1>
 
 				{/* Subtitle */}
-				<p className="mt-4 text-lg text-gray-300 opacity-0 animate-fade-in-up delay-300">
+				<p className="mt-4 text-lg text-gray-300 ">
 					I specialize in building modern and responsive web applications.
 				</p>
 
@@ -57,4 +57,4 @@ const Home = () => {
 	);
 };
 
-export default Hero;
+export default Home;
