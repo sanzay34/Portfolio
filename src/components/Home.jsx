@@ -17,15 +17,15 @@ const Home = () => {
 			</div>
 			<div>
 				{/* Title */}
-				<h1 className="text-xl lg:text-3xl font-bold opacity-20 animate-fade-in-up">
+				<h2 className="text-xl lg:text-3xl font-bold opacity-20 animate-fade-in-up p-3">
 					I'm{" "}
 					<span className=" bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
 						Sanjaya Khatiwada
 					</span>
 					, Frontend Developer specialized in building modern and responsive web
 					applications.
-				</h1>
-				specialized in building modern and responsive web applications.
+				</h2>
+	
 				<div className="flex items-center justify-center gap-3 mt-3">
 					{/* Buttons */}
 					<div>
