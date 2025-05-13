@@ -5,10 +5,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
 	const [hamIcon, setHamIcon] = useState(false);
 	const navLinks = [
-		{ href: "#home", label: "Home" },
+		{ href: "#hero", label: "Home" },
 		{ href: "#about", label: "About Me" },
-		{ href: "#services", label: "Services" },
-		{ href: "#projects", label: "Projects" },
+		{ href: "#service", label: "Services" },
+		{ href: "#project", label: "Projects" },
 		{ href: "#contact", label: "Contact" },
 	];
 	return (
