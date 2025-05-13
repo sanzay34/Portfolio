@@ -5,7 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
 	const [hamIcon, setHamIcon] = useState(false);
 	const navLinks = [
-		{ href: "#hero", label: "Home" },
+		{ href: "#home", label: "Home" },
 		{ href: "#about", label: "About Me" },
 		{ href: "#service", label: "Services" },
 		{ href: "#project", label: "Projects" },

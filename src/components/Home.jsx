@@ -3,7 +3,7 @@ import HeroImage from "../assets/profile.jpeg";
 
 const Hero = () => {
 	return (
-		<div className="bg-black text-white text-center py-16 overflow-hidden md:flex-col relative" id="hero">
+		<div className="bg-black text-white text-center py-16 overflow-hidden md:flex-col relative" id="home">
 			<div>
 				{/* Profile Image */}
 				<img
