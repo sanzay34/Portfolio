@@ -8,7 +8,7 @@ const projects = [
 		name: "Todo App",
 		technologies: "React Vite",
 		image: todoImage,
-		github:
+		vercel:
 			"https://todolist-9rg5ypiq1-sanjaya-khatiwadas-projects.vercel.app/",
 	},
 	{
@@ -16,7 +16,14 @@ const projects = [
 		name: "Personality Prediction",
 		technologies: "React",
 		image: personalityImage,
-		github: "https://personalityprediction.netlify.app/",
+		netlify: "https://personalityprediction.netlify.app/",
+	},
+	{
+		id: 3,
+		name: "Ecommerce Website",
+		technologies: "React",
+		image: personalityImage,
+		netlify: "https://ktmfashioncollection.netlify.app/",
 	},
 ];
 
