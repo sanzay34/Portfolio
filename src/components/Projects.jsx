@@ -10,6 +10,7 @@ const projects = [
 		image: todoImage,
 		vercel:
 			"https://todolist-9rg5ypiq1-sanjaya-khatiwadas-projects.vercel.app/",
+		github: "https://github.com/sanzay34/Todolist",
 	},
 	{
 		id: 2,
@@ -17,6 +18,7 @@ const projects = [
 		technologies: "React",
 		image: personalityImage,
 		netlify: "https://personalityprediction.netlify.app/",
+		github: "https://github.com/sanzay34/frontend_personality_prediction",
 	},
 	{
 		id: 3,
@@ -24,6 +26,7 @@ const projects = [
 		technologies: "React",
 		image: ecommerce,
 		netlify: "https://ktmfashioncollection.netlify.app/",
+		github: "https://github.com/sanzay34/Ecommerce",
 	},
 ];
 
@@ -58,15 +61,22 @@ const Projects = () => {
 							{/* Project Technologies */}
 							<p className="text-gray-400 mb-4">{project.technologies}</p>
 
-							{/* GitHub Link */}
+							{/* Deployment Link */}
 							<a
-								href={project.github}
-								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white cursor-pointer px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+								href={project.vercel || project.netlify}
+								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								Deploy
 							</a>
+							{/* Github Link */}
+							<a
+								href={project.github}
+								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+								target="_blank"
+								rel="noopener noreferrer"
+							></a>
 						</div>
 					))}
 				</div>
