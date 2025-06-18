@@ -62,21 +62,23 @@ const Projects = () => {
 							<p className="text-gray-400 mb-4">{project.technologies}</p>
 
 							{/* Deployment Link */}
-							<a
-								href={project.vercel || project.netlify}
-								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Deploy
-							</a>
-							{/* Github Link */}
-							<a
-								href={project.github}
-								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
-								target="_blank"
-								rel="noopener noreferrer"
-							></a>
+							<div className="flex gap-2">
+								<a
+									href={project.vercel || project.netlify}
+									className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Deploy
+								</a>
+								{/* Github Link */}
+								<a
+									href={project.github}
+									className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+									target="_blank"
+									rel="noopener noreferrer"
+								>Github</a>
+							</div>
 						</div>
 					))}
 				</div>
