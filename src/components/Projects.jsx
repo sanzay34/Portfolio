@@ -61,7 +61,7 @@ const Projects = () => {
 							{/* GitHub Link */}
 							<a
 								href={project.github}
-								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+								className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white cursor-pointer px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
