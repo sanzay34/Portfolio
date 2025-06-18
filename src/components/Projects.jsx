@@ -25,7 +25,8 @@ const projects = [
 		name: "Ecommerce Website",
 		technologies: "React",
 		image: ecommerce,
-		netlify: "https://ktmfashioncollection.netlify.app/",
+		user: "https://ktmfashioncollection.netlify.app/",
+		admin:"https://ktmfashioncollectionadmin.netlify.app/",
 		github: "https://github.com/sanzay34/Ecommerce",
 	},
 ];
@@ -61,23 +62,47 @@ const Projects = () => {
 							{/* Project Technologies */}
 							<p className="text-gray-400 mb-4">{project.technologies}</p>
 
-							{/* Deployment Link */}
-							<div className="flex gap-2">
+							<div className="flex flex-wrap gap-2">
+								{/* Conditional Deployment Links */}
+								{project.name === "Ecommerce Website" ? (
+									<>
+										<a
+											href={project.user}
+											className="inline-block bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											User Deploy
+										</a>
+										<a
+											href={project.admin}
+											className="inline-block bg-gradient-to-r from-yellow-400 to-red-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Admin Deploy
+										</a>
+									</>
+								) : (
+									<a
+										href={project.vercel || project.netlify}
+										className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Deploy
+									</a>
+								)}
+
+								{/* GitHub Link (always shown) */}
 								<a
-									href={project.vercel || project.netlify}
-									className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
+									href={project.github}
+									className="inline-block bg-gradient-to-r from-gray-700 to-gray-900 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Deploy
+									GitHub
 								</a>
-								{/* Github Link */}
-								<a
-									href={project.github}
-									className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-110 hover:shadow-lg"
-									target="_blank"
-									rel="noopener noreferrer"
-								>Github</a>
 							</div>
 						</div>
 					))}
