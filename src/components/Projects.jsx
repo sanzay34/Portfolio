@@ -1,7 +1,7 @@
 import React from "react";
 import todoImage from "../assets/image1.png";
 import personalityImage from "../assets/image.png";
-
+import ecommerce from '../assets/ecommerce.png'
 const projects = [
 	{
 		id: 1,
@@ -22,7 +22,7 @@ const projects = [
 		id: 3,
 		name: "Ecommerce Website",
 		technologies: "React",
-		image: personalityImage,
+		image: ecommerce,
 		netlify: "https://ktmfashioncollection.netlify.app/",
 	},
 ];
