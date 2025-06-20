@@ -9,7 +9,7 @@ import Service from "./components/Service";
 
 function App() {
 	return (
-		<div className="">
+		<div className="bg-lime-50">
 			<Navbar />
 			<Home />
 			<About />

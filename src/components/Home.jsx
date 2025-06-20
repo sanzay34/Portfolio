@@ -4,28 +4,22 @@ import HeroImage from "../assets/profile.jpeg";
 const Home = () => {
 	return (
 		<div
-			className="bg-black text-white text-center py-16 overflow-hidden md:flex-col relative"
+			className="  h-screen md:flex flex flex-row text-center p-16 overflow-hidden relative justify-between items-center"
 			id="home"
 		>
-			<div>
-				{/* Profile Image */}
-				<img
-					src={HeroImage}
-					alt="Sanjaya Khatiwada"
-					className="mx-auto mb-8 w-48 h-48 rounded-full object-cover shadow-lg transform transition-transform duration-300 hover:scale-110 hover:rotate-3"
-				/>
-			</div>
-			<div>
+			<div className="w-[50%]">
 				{/* Title */}
-				<h2 className="text-xl lg:text-3xl font-bold opacity-20 animate-fade-in-up p-3">
-					I'm{" "}
-					<span className=" bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-						Sanjaya Khatiwada
-					</span>
+				<div className="text-xl lg:text-3xl font-bold  animate-fade-in-up p-3">
+					<p className="text-left mb-5 ml-10">Hello,</p>
+					<p className="text-left mb-5 ml-10">
+						I'm Sanjaya Khatiwada
+						
+					</p>
+					
 					, Frontend Developer specialized in building modern and responsive web
 					applications.
-				</h2>
-	
+				</div>
+
 				<div className="flex items-center justify-center gap-3 mt-3">
 					{/* Buttons */}
 					<div>
@@ -43,15 +37,14 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-
-			{/* Background Glow Effect */}
-			<div
-				className="absolute inset-0 z-[-1] opacity-0 animate-fade-in delay-500"
-				style={{
-					background:
-						"radial-gradient(circle, rgba(32,178,170,0.4) 0%, rgba(0,0,0,0) 60%)",
-				}}
-			/>
+			<div>
+				{/* Profile Image */}
+				<img
+					src={HeroImage}
+					alt="Sanjaya Khatiwada"
+					className="mx-auto mb-8 w-48 h-68 shadow-lg transform transition-transform duration-300 hover:scale-110 hover:rotate-3"
+				/>
+			</div>
 		</div>
 	);
 };

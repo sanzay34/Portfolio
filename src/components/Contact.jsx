@@ -45,7 +45,7 @@ const Contact = () => {
 	};
 
 	return (
-		<div className="bg-black text-white py-20 scroll-mt-20" id="contact">
+		<div className=" py-20 scroll-mt-20" id="contact">
 			<div className="container mx-auto px-8 md:px-16 lg:px-24">
 				<h2 className="text-4xl font-bold text-center mb-12">Contact Me</h2>
 
@@ -91,7 +91,7 @@ const Contact = () => {
 									name="name"
 									value={formData.name}
 									onChange={handleChange}
-									className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400"
+									className="bg-slate-100 w-full p-2 rounded  border border-gray-600 focus:outline-none focus:border-green-400"
 									placeholder="Enter Your Name"
 									required
 								/>
@@ -104,7 +104,7 @@ const Contact = () => {
 									name="email"
 									value={formData.email}
 									onChange={handleChange}
-									className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400"
+									className="bg-slate-100 w-full p-2 rounded  border border-gray-600 focus:outline-none focus:border-green-400"
 									placeholder="Enter Your Email"
 									required
 								/>
@@ -116,7 +116,7 @@ const Contact = () => {
 									name="message"
 									value={formData.message}
 									onChange={handleChange}
-									className="w-full p-2 rounded bg-gray-800 border border-gray-600 focus:outline-none focus:border-green-400"
+									className=" bg-slate-100 w-full p-2 rounded  border border-gray-600 focus:outline-none focus:border-green-400"
 									rows="5"
 									placeholder="Enter Your Message"
 									required

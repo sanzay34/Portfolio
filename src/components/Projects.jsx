@@ -33,7 +33,7 @@ const projects = [
 
 const Projects = () => {
 	return (
-		<div className="bg-black text-white py-20" id="project">
+		<div className=" py-20" id="project">
 			<div className="container mx-auto px-8 md:px-16 lg:px-24">
 				{/* Section Title */}
 				<h2 className="text-4xl font-bold text-center mb-12">My Projects</h2>
@@ -43,7 +43,7 @@ const Projects = () => {
 					{projects.map((project, index) => (
 						<div
 							key={project.id}
-							className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 opacity-0 animate-fadeIn"
+							className="bg-slate-200 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 opacity-0 animate-fadeIn"
 							style={{
 								animationDelay: `${index * 0.3}s`,
 								animationFillMode: "forwards",

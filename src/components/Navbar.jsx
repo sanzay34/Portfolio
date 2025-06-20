@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import {Link,NavLink} from "react-router-dom"
 const Navbar = () => {
 	const [hamIcon, setHamIcon] = useState(false);
 	const navLinks = [
@@ -12,7 +12,7 @@ const Navbar = () => {
 		{ href: "#contact", label: "Contact" },
 	];
 	return (
-		<nav className="bg-green-600 text-white px-8 p-4 sticky top-0 w-full z-50">
+		<nav className="bg-blue-100 text-black font-bold px-8 p-4 sticky top-0 w-full z-50 shadow-md">
 			<div className=" flex justify-between  items-center">
 				<ul className="hidden md:flex space-x-6">
 					{navLinks.map((link) => (
@@ -23,6 +23,7 @@ const Navbar = () => {
 							>
 								{link.label}
 							</a>
+							<hr className="w-2/4 border-none h-[2px] bg-gray-600 hidden"></hr>
 						</li>
 					))}
 				</ul>
