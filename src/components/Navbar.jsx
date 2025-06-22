@@ -7,14 +7,14 @@ const Navbar = () => {
 	const navLinks = [
 		{ href: "#home", label: "Home" },
 		{ href: "#about", label: "About Me" },
-		{ href: "#service", label: "Services" },
+		
 		{ href: "#project", label: "Projects" },
 		{ href: "#contact", label: "Contact" },
 	];
 	return (
 		<nav className="bg-blue-100 text-black font-bold px-8 p-4 sticky top-0 w-full z-50 shadow-md">
-			<div className=" flex justify-between  items-center">
-				<ul className="hidden md:flex space-x-6">
+			<div className=" flex items-center">
+				<ul className="hidden md:flex md:flex-1 space-x-6">
 					{navLinks.map((link) => (
 						<li key={link.href}>
 							<a
@@ -37,7 +37,7 @@ const Navbar = () => {
 				</button>
 			</div>
 			{hamIcon && (
-				<div className="md:hidden flex flex-col space-y-2 mt-2">
+				<div className="md:hidden flex flex-col space-y-4 mt-4 absolute left-4 top-16 bg-blue-100 p-4 rounded-lg shadow">
 					{navLinks.map((link) => (
 						<a
 							key={link.href}

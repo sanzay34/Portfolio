@@ -1,23 +1,23 @@
 import React from "react";
-import HeroImage from "../assets/profile.jpeg";
+import HeroImage from "../assets/profilep.webp";
 
 const Home = () => {
 	return (
 		<div
-			className="  h-screen md:flex flex flex-row text-center p-16 overflow-hidden relative justify-between items-center"
+			className="flex flex-row text-center md:p-16 p-4 overflow-hidden relative justify-between items-center"
 			id="home"
 		>
-			<div className="w-[50%]">
+			<div className=" w-[40%]">
 				{/* Title */}
-				<div className="text-xl lg:text-3xl font-bold  animate-fade-in-up p-3">
-					<p className="text-left mb-5 ml-10">Hello,</p>
-					<p className="text-left mb-5 ml-10">
-						I'm Sanjaya Khatiwada
-						
+				<div className="text-xl lg:text-3xl animate-fade-in-up p-3">
+					<p className="sm:text-left sm:mb-5 sm:ml-10">Hey,</p>
+					<p className="sm:text-left sm:mb-5 sm:ml-10 font-bold">
+						I'm Sanjaya Khatiwada,
 					</p>
-					
-					, Frontend Developer specialized in building modern and responsive web
-					applications.
+					<p className="sm:text-left sm:mb-5 sm:ml-10">
+						Frontend Developer specialized in building modern and responsive web
+						applications.
+					</p>
 				</div>
 
 				<div className="flex items-center justify-center gap-3 mt-3">
@@ -37,12 +37,12 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div>
+			<div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
 				{/* Profile Image */}
 				<img
 					src={HeroImage}
 					alt="Sanjaya Khatiwada"
-					className="mx-auto mb-8 w-48 h-68 shadow-lg transform transition-transform duration-300 hover:scale-110 hover:rotate-3"
+					className="w-60 h-60 rounded-full object-contain"
 				/>
 			</div>
 		</div>
