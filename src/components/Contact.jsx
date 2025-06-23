@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaMapMarkedAlt, FaPhone } from "react-icons/fa";
+import {
+	FaEnvelope,
+	FaMapMarkedAlt,
+	FaPhone,
+	FaGithub,
+	FaLinkedin,
+} from "react-icons/fa";
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
@@ -73,6 +79,21 @@ const Contact = () => {
 						<div className="mb-4">
 							<FaMapMarkedAlt className="inline-block text-green-400 mr-2" />
 							<span>Mahankal-6, Chabahil, Kathmandu, Nepal</span>
+						</div>
+						<div className="mb-4 flex gap-5">
+							<a
+														href="https://www.linkedin.com/in/sanjaya-khatiwada-b65213216/"
+														className="text-gray-800 hover:text-black"
+													>
+														<FaLinkedin className="w-5 h-5"/>
+													</a>
+													<a
+														href="https://github.com/sanzay34"
+														className="text-gray-800 hover:text-black"
+													>
+														<FaGithub className="w-5 h-5" />
+													</a>
+
 						</div>
 					</div>
 

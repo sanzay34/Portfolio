@@ -14,7 +14,7 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className="bg-blue-100 text-black font-bold px-8 p-4 sticky top-0 w-full z-50 shadow-md">
+		<nav className="bg-blue-100 text-gray-400 font-bold px-8 p-4 sticky top-0 w-full z-50 shadow-md">
 			<div className="flex items-center justify-between">
 				<ul className="hidden md:flex md:flex-1 space-x-6">
 					{navLinks.map((link) => {
@@ -25,7 +25,7 @@ const Navbar = () => {
 								<a
 									href={link.href}
 									className={`transition duration-150 ease-in-out ${
-										isActive ? "text-gray-400" : "hover:text-gray-400"
+										isActive ? "text-black" : "hover:text-black"
 									}`}
 								>
 									{link.label}
@@ -34,8 +34,8 @@ const Navbar = () => {
 									className={`absolute left-2 bottom-[-4px] h-[2px] rounded transition-all duration-300
                     ${
 											isActive
-												? "w-2/3 bg-gray-600 "
-												: "w-0 group-hover:w-full group-hover:bg-gray-600"
+												? "w-2/3 bg-black "
+												: "w-0 group-hover:w-2/3 group-hover:bg-black"
 										}`}
 								/>
 							</li>

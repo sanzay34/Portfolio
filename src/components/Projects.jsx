@@ -6,7 +6,7 @@ const projects = [
 	{
 		id: 1,
 		name: "Todo App",
-		technologies: "React Vite",
+		technologies: "Reactjs,Tailwindcss",
 		image: todoImage,
 		vercel:
 			"https://todolist-9rg5ypiq1-sanjaya-khatiwadas-projects.vercel.app/",
@@ -15,7 +15,7 @@ const projects = [
 	{
 		id: 2,
 		name: "Personality Prediction",
-		technologies: "React",
+		technologies: "Reactjs,Tailwindcss",
 		image: personalityImage,
 		netlify: "https://personalityprediction.netlify.app/",
 		github: "https://github.com/sanzay34/frontend_personality_prediction",
@@ -23,7 +23,7 @@ const projects = [
 	{
 		id: 3,
 		name: "Ecommerce Website",
-		technologies: "React",
+		technologies: "Reactjs,Tailwindcss,Mongodb,Nodejs,Expressjs",
 		image: ecommerce,
 		user: "https://ktmfashioncollection.netlify.app/",
 		admin:"https://ktmfashioncollectionadmin.netlify.app/",
