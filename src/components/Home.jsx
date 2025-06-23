@@ -4,7 +4,7 @@ import HeroImage from "../assets/profilep.webp";
 const Home = () => {
 	return (
 		<div
-			className="flex flex-row text-center md:p-16 p-4 overflow-hidden relative justify-between items-center"
+			className=" h-screen flex flex-row text-center md:p-16 p-4 overflow-hidden relative justify-between items-center"
 			id="home"
 		>
 			<div className=" w-[40%]">
@@ -20,7 +20,7 @@ const Home = () => {
 					</p>
 				</div>
 
-				<div className="flex items-center justify-center gap-3 mt-3">
+				<div className=" flex flex-col gap-y-5 mt-3">
 					{/* Buttons */}
 					<div>
 						<a href="#contact" className="mt-8 space-x-4">
@@ -37,12 +37,12 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
+			<div className="md:w-1/2 flex items-center justify-center mt-0 md:mt-0">
 				{/* Profile Image */}
 				<img
 					src={HeroImage}
 					alt="Sanjaya Khatiwada"
-					className="w-60 h-60 rounded-full object-contain"
+					className="w-60 h-60 rounded-full object-contain  "
 				/>
 			</div>
 		</div>
