@@ -48,7 +48,7 @@ const Navbar = () => {
 					className="md:hidden"
 					aria-label={hamIcon ? "Close menu" : "Open menu"}
 				>
-					{hamIcon ? <FaTimes size={24} /> : <FaBars size={24} />}
+					{hamIcon ? <FaTimes size={24} color="black" /> : <FaBars size={24} color="black" />}
 				</button>
 			</div>
 
@@ -61,8 +61,8 @@ const Navbar = () => {
 							onClick={() => setHamIcon(false)}
 							className={`transition duration-150 ease-in-out ${
 								location.hash === link.href
-									? "text-gray-400"
-									: "hover:text-gray-400"
+									? "text-black"
+									: "hover:black"
 							}`}
 						>
 							{link.label}
