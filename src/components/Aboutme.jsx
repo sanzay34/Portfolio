@@ -44,7 +44,7 @@ const About = () => {
 								</div>
 							</div>
 							<div className="flex items-center">
-								<label htmlFor="javascript" className="w-2/12">
+								<label htmlFor="javascript" className="w-3/12 sm:w-2/12">
 									JAVASCRIPT
 								</label>
 								<div className="grow bg-gray-800 rounded-full h-2.5">

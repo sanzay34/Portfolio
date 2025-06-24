@@ -22,13 +22,7 @@ const Home = () => {
 
 				<div className=" flex flex-col gap-y-5 mt-3">
 					{/* Buttons */}
-					<div>
-						<a href="#contact" className="mt-8 space-x-4">
-							<button className="bg-gradient-to-r from-green-400 to-blue-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full hover:scale-110 hover:shadow-lg">
-								Contact With Me
-							</button>
-						</a>
-					</div>
+					
 
 					<div>
 						<button className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full hover:scale-110 hover:shadow-lg">
