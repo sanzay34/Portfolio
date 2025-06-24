@@ -1,42 +1,38 @@
 import React from "react";
 import HeroImage from "../assets/profilep.webp";
-
+import resume from "../assets/resume.pdf"
 const Home = () => {
 	return (
 		<div
-			className=" h-screen flex flex-row text-center md:p-16 p-4 overflow-hidden relative justify-between items-center"
 			id="home"
+			className="min-h-screen flex flex-col md:flex-row justify-center items-center p-4 md:p-16 space-y-6 md:space-y-0 md:space-x-12"
 		>
-			<div className=" w-[40%]">
-				{/* Title */}
-				<div className="text-xl lg:text-3xl animate-fade-in-up p-3">
-					<p className="sm:text-left sm:mb-5 sm:ml-10">Hey,</p>
-					<p className="sm:text-left sm:mb-5 sm:ml-10 font-bold">
-						I'm Sanjaya Khatiwada,
-					</p>
-					<p className="sm:text-left sm:mb-5 sm:ml-10">
-						Frontend Developer specialized in building modern and responsive web
-						applications.
-					</p>
-				</div>
-
-				<div className=" flex flex-col gap-y-5 mt-3">
-					{/* Buttons */}
-					
-
-					<div>
-						<button className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white transform transition-transform duration-300 px-4 py-2 rounded-full hover:scale-110 hover:shadow-lg">
-							Resume
-						</button>
-					</div>
+			{/* Left Text Section */}
+			<div className="flex flex-col flex-1 justify-center text-center md:text-left space-y-4">
+				<p className="text-lg sm:text-xl md:text-2xl">Hey,</p>
+				<p className="text-2xl sm:text-3xl md:text-4xl font-bold">
+					I'm Sanjaya Khatiwada,
+				</p>
+				<p className="text-base sm:text-lg md:text-xl">
+					Frontend Developer specialized in building modern and responsive web
+					applications.
+				</p>
+				<div className="mt-4 flex justify-center md:justify-start">
+					<button
+						onClick={() => window.open(resume, "_blank")}
+						className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white transform transition-transform duration-300 px-6 py-3 rounded-full hover:scale-105 hover:shadow-lg"
+					>
+						Resume
+					</button>
 				</div>
 			</div>
-			<div className="md:w-1/2 flex items-center justify-center mt-0 md:mt-0">
-				{/* Profile Image */}
+
+			{/* Right Image Section */}
+			<div className="flex flex-1 items-center justify-center">
 				<img
 					src={HeroImage}
 					alt="Sanjaya Khatiwada"
-					className="w-60 h-60 rounded-full object-contain  "
+					className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-contain"
 				/>
 			</div>
 		</div>

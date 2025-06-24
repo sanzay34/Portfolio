@@ -7,17 +7,14 @@ const About = () => {
 			<div className="container mx-auto px-8 md:px-16 lg:px-24">
 				<h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
 				<div className="flex flex-col md:flex-row items-center md:space-x-12">
-					<img
-						src={AboutImage}
-						alt=""
-						className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
-					/>
 					<div className="flex-1">
 						<p className="text-lg mb-8">
-							I am a passionate frontend developer with a focus on building
-							modern and responsive web applications. With a strong foundation
-							in frontend technologies, I strive to create seamless and
-							efficient user experiences.
+							Hi! I’m Sanjaya Khatiwada, a passionate Frontend Developer
+							specializing in crafting modern, responsive, and user-friendly
+							websites. I focus on delivering seamless, mobile-first design and
+							interactive interfaces that adapt beautifully across all screen
+							sizes. My goal is to transform ideas into clean, elegant, and
+							highly performant web experiences.
 						</p>
 						<div className="space-y-4">
 							<div className="flex items-center">
@@ -65,7 +62,6 @@ const About = () => {
 									></div>
 								</div>
 							</div>
-							
 						</div>
 						<div className="mt-12 flex justify-around text-center">
 							<div>
