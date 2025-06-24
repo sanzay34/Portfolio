@@ -5,7 +5,7 @@ const Home = () => {
 	return (
 		<div
 			id="home"
-			className="min-h-screen flex flex-col md:flex-row justify-center items-center p-4 md:p-16 space-y-6 md:space-y-0 md:space-x-12"
+			className="min-h-screen flex flex-col md:flex-row justify-center items-center p-4 md:p-56 space-y-6 md:space-y-0 md:space-x-12"
 		>
 			{/* Left Text Section */}
 			<div className="flex flex-col flex-1 justify-center text-center md:text-left space-y-4">
@@ -28,12 +28,14 @@ const Home = () => {
 			</div>
 
 			{/* Right Image Section */}
-			<div className="flex flex-1 items-center justify-center">
-				<img
-					src={HeroImage}
-					alt="Sanjaya Khatiwada"
-					className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-contain"
-				/>
+			<div className="flex flex-1 items-center justify-center ">
+				<div className="border w-72 h-72 bg-zinc-200 border-b-green-700 border-t-red-700 border-l-blue-700 border-r-purple-700 rounded-bl-3xl rounded-ss-full rounded-e-full rounded-br-full">
+					<img
+						src={HeroImage}
+						alt="Sanjaya Khatiwada"
+						className="w-64 h-64 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-contain"
+					/>
+				</div>
 			</div>
 		</div>
 	);

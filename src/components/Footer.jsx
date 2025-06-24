@@ -35,18 +35,8 @@ const Footer = () => {
 						>
 							<FaInstagram />
 						</a>
-						<a
-							href="https://www.linkedin.com/in/sanjaya-khatiwada-b65213216/"
-							className="text-gray-800 hover:text-black"
-						>
-							<FaLinkedin />
-						</a>
-						<a
-							href="https://github.com/sanzay34"
-							className="text-gray-800 hover:text-black"
-						>
-							<FaGithub />
-						</a>
+						
+						
 					</div>
 					<div className="flex space-x-4">
 						<a href="#" className="text-gray-800 hover:text-black">

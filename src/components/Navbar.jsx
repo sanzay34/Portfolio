@@ -14,7 +14,7 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className="bg-blue-100 text-gray-400 font-bold px-8 p-4 sticky top-0 w-full z-50 shadow-md">
+		<nav className="bg-blue-100 text-gray-400 font-bold md:text-xl px-8 p-4 sticky top-0 w-full z-50 shadow-md">
 			<div className="flex items-center justify-between">
 				<ul className="hidden md:flex md:flex-1 space-x-6">
 					{navLinks.map((link) => {
