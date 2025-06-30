@@ -8,7 +8,7 @@ const About = () => {
 				<h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
 				<div className="flex flex-col md:flex-row items-center md:space-x-12">
 					<div className="flex-1">
-						<p className="text-lg mb-8">
+						<p className="text-lg mb-8 animate__animated animate__fadeInDown">
 							Hi! I’m Sanjaya Khatiwada, a passionate Frontend Developer
 							specializing in crafting modern, responsive, and user-friendly
 							websites. I focus on delivering seamless, mobile-first design and
@@ -16,7 +16,7 @@ const About = () => {
 							sizes. My goal is to transform ideas into clean, elegant, and
 							highly performant web experiences.
 						</p>
-						<div className="space-y-4">
+						<div className="space-y-4 animate__animated animate__fadeInDown  animate__slow">
 							<div className="flex items-center">
 								<label htmlFor="html" className="w-2/12">
 									HTML5

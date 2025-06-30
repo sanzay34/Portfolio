@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../assets/profilep.webp";
 import resume from "../assets/resume.pdf"
+import 'animate.css'
 const Home = () => {
 	return (
 		<div
@@ -10,7 +11,7 @@ const Home = () => {
 			{/* Left Text Section */}
 			<div className="flex flex-col flex-1 justify-center text-center md:text-left space-y-4">
 				<p className="text-lg sm:text-xl md:text-2xl">Hey,</p>
-				<p className="text-2xl sm:text-3xl md:text-4xl font-bold">
+				<p className=" animate__animated animate__zoomInDown animate__slow text-2xl sm:text-3xl md:text-4xl font-bold">
 					I'm Sanjaya Khatiwada,
 				</p>
 				<p className="text-base sm:text-lg md:text-xl">
@@ -29,11 +30,11 @@ const Home = () => {
 
 			{/* Right Image Section */}
 			<div className="flex flex-1 items-center justify-center ">
-				<div className="border w-72 h-72 bg-zinc-200 border-b-green-700 border-t-red-700 border-l-blue-700 border-r-purple-700 rounded-bl-3xl rounded-ss-full rounded-e-full rounded-br-full">
+				<div className=" animate__animated animate__bounceInUp animate__slow border w-72 h-72 bg-zinc-200 border-b-green-700 border-t-red-700 border-l-blue-700 border-r-purple-700 rounded-bl-3xl rounded-ss-full rounded-e-full rounded-br-full">
 					<img
 						src={HeroImage}
 						alt="Sanjaya Khatiwada"
-						className="w-64 h-64 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-contain"
+						className="w-64 h-64 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-contain  animate__animated animate__bounceInDown animate__slow"
 					/>
 				</div>
 			</div>
