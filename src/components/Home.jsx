@@ -6,7 +6,7 @@ const Home = () => {
 	return (
 		<div
 			id="home"
-			className="min-h-screen flex flex-col md:flex-row justify-center items-center p-4 md:p-56 space-y-6 md:space-y-0 md:space-x-12"
+			className="min-h-screen flex flex-wrap-reverse gap-3 md:flex-row justify-center items-center p-8 md:p-56 space-y-6 md:space-y-0 md:space-x-12"
 		>
 			{/* Left Text Section */}
 			<div className="flex flex-col flex-1 justify-center text-center md:text-left space-y-4">
